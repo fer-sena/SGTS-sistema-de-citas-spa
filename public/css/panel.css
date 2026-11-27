@@ -1,0 +1,114 @@
+/* ==========================================================
+   Aura Zen — tema del panel (sobre AdminLTE 3)
+   ========================================================== */
+:root {
+  --primary: #DD7693;
+  --primary-dark: #c95f7d;
+  --primary-soft: #fbe9ee;
+  --secondary: #A47A5A;
+  --secondary-soft: #f3ebe4;
+  --info: #c9a690;
+  --bg: #faf7f5;
+  --text: #2b2b2b;
+  --muted: #8a8380;
+  --border: #eee6e1;
+  --radius: 16px;
+  --shadow: 0 4px 18px rgba(164, 122, 90, .08);
+}
+
+body { font-family: 'Baloo 2', 'Source Sans Pro', sans-serif; color: var(--text); background: var(--bg); }
+.content-wrapper { background: var(--bg); }
+a { color: var(--primary); }
+.text-primary { color: var(--primary) !important; }
+
+/* Botón redondo de acción (lápiz) */
+.btn-icon {
+  width: 36px; height: 36px; padding: 0; border-radius: 50%;
+  background: #fff; border: 1px solid var(--border); color: var(--text);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.btn-icon:hover { background: var(--primary-soft); border-color: var(--primary); color: var(--primary); }
+.btn-icon-danger { color: #dc3545; }
+.btn-icon-danger:hover { background: #fdecee; border-color: #dc3545; color: #dc3545; }
+a:hover { color: var(--primary-dark); }
+
+/* ---------- Botones y formularios ---------- */
+.btn { border-radius: 999px; font-weight: 600; padding: .4rem 1.1rem; }
+.btn-primary { background: var(--primary); border-color: var(--primary); }
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active { background: var(--primary-dark) !important; border-color: var(--primary-dark) !important; }
+.btn-light { background: #fff; border-color: var(--border); }
+.form-control, .custom-select { border-radius: 12px; border-color: var(--border); }
+.form-control:focus, .custom-select:focus { border-color: var(--primary); box-shadow: 0 0 0 .2rem rgba(221, 118, 147, .2); }
+label { font-weight: 600 !important; color: #555; }
+
+/* ---------- Navbar ---------- */
+.main-header { border-bottom: 1px solid var(--border) !important; }
+.main-header .nav-link { color: #555 !important; }
+
+/* ---------- Sidebar ---------- */
+.main-sidebar { background: #fff; box-shadow: 1px 0 0 var(--border) !important; }
+.brand-link { border-bottom: 1px solid var(--border) !important; display: flex; align-items: center; gap: .5rem; padding: 1rem; }
+.brand-logo {
+  width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--primary); color: var(--primary);
+  display: inline-flex; align-items: center; justify-content: center; font-size: .95rem;
+}
+.brand-link .brand-text { color: var(--primary) !important; font-size: 1.35rem; font-weight: 500; }
+.sidebar .user-panel { border-bottom: 1px solid var(--border) !important; }
+.sidebar .user-panel .info a { color: var(--text); font-weight: 600; }
+.sidebar .user-panel small { color: var(--muted); }
+.nav-sidebar .nav-header { color: var(--muted); font-size: .72rem; letter-spacing: .08em; padding-top: 1rem; }
+.nav-sidebar .nav-link { color: #5a5352 !important; border-radius: 12px !important; }
+.nav-sidebar .nav-link:hover { background: var(--primary-soft) !important; color: var(--primary) !important; }
+.nav-sidebar .nav-link.active { background: var(--primary) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(221, 118, 147, .35) !important; }
+
+/* ---------- Encabezado y tarjetas ---------- */
+.page-title { font-weight: 700; font-size: 1.6rem; margin: 0; }
+.page-subtitle { color: var(--muted); margin: 0; }
+.card { border: 0; border-radius: var(--radius); box-shadow: var(--shadow); }
+.card-header { background: transparent; border-bottom: 1px solid var(--border); padding: 1rem 1.25rem; }
+.card-title { font-weight: 700; font-size: 1.05rem; }
+.card-footer { background: transparent; border-top: 1px solid var(--border); }
+
+/* ---------- Tablas ---------- */
+.table thead th { border-top: 0; border-bottom: 1px solid var(--border); color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
+.table td { border-top: 1px solid var(--border); vertical-align: middle; }
+.avatar {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  background: var(--secondary-soft); color: var(--secondary);
+  display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: .85rem;
+}
+
+/* ---------- Roles ---------- */
+.role { display: inline-block; padding: .2rem .7rem; border-radius: 999px; font-size: .78rem; font-weight: 600; }
+.role-admin { background: var(--primary-soft); color: var(--primary-dark); }
+.role-recepcionista { background: var(--secondary-soft); color: var(--secondary); }
+.role-esteticista { background: #fff; color: #9b7a63; border: 1px solid var(--info); }
+.role-cliente { background: #f1efee; color: var(--muted); }
+
+/* ---------- Matriz de permisos con checkbox redondo ---------- */
+.perm-table td, .perm-table th { text-align: center; }
+.perm-table td:first-child, .perm-table th:first-child { text-align: left; }
+
+.check {
+  appearance: none; -webkit-appearance: none;
+  width: 22px; height: 22px; margin: 0; border-radius: 50%;
+  border: 2px solid #d8d2cf; background: #fff;
+  position: relative; cursor: pointer; vertical-align: middle;
+  transition: background .15s, border-color .15s, transform .1s;
+}
+.check:hover { border-color: var(--primary); }
+.check:active { transform: scale(.9); }
+.check:focus-visible { outline: none; box-shadow: 0 0 0 .2rem rgba(221, 118, 147, .3); }
+.check:checked { background: var(--primary); border-color: var(--primary); }
+.check:checked::after {           /* la palomita blanca */
+  content: ''; position: absolute; left: 6px; top: 2px;
+  width: 6px; height: 11px; border: solid #fff; border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.check:disabled { cursor: not-allowed; opacity: .55; }
+
+.main-footer { background: #fff; border-top: 1px solid var(--border); color: var(--muted); font-size: .85rem; }
+.modal-content { border: 0; border-radius: var(--radius); }
+.modal-header { border-bottom: 1px solid var(--border); }
+.modal-footer { border-top: 1px solid var(--border); }
+.alert-success { background: #e6f5ee; color: #2f8f63; border: 0; border-radius: 12px; }
